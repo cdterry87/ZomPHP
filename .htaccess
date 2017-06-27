@@ -1,0 +1,14 @@
+#Enable mod_rewrite
+RewriteEngine On
+RewriteBase /zomphp/
+
+#Protect directories from unauthorized access
+Options All -Indexes
+ServerSignature Off
+IndexIgnore *
+
+#Reroute all requests through index.php?z_page=page.php
+#Remove index.php from URL.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?z_page=$1 [L]s

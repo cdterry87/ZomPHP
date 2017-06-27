@@ -1,7 +1,7 @@
 <?php
 
 /* ----------------------------------------------------------------------
- * Redirect to the specified page.
+ * Redirect to the specified page
  * ---------------------------------------------------------------------- */
 function redirect($page){
 	extract($GLOBALS);
@@ -11,7 +11,7 @@ function redirect($page){
 }
 
 /* ----------------------------------------------------------------------
- * Get the URI.  If a segment is specified, only get that segment.
+ * Get the URI. If a segment is specified, only get that segment
  * ---------------------------------------------------------------------- */
 function get_uri($segment=''){
 	$uri=$_SERVER['REQUEST_URI'];
