@@ -88,7 +88,7 @@ class ZomPHP{
 			return require_once($valid_controller_path);
 		}
 		
-		return $this->error(__FUNCTION__);
+		return false;
 	}
 	
 	/* --------------------------------------------------------------------------------
@@ -121,14 +121,31 @@ class ZomPHP{
 			return print($view);
 		}
 		
-		return $this->error(__FUNCTION__);
+		return false;
 	}
 	
 	/* --------------------------------------------------------------------------------
 	 * Load a specified model class
 	 * -------------------------------------------------------------------------------- */
 	public function model($file){
+		$model_path=$_SERVER['DOCUMENT_ROOT'].'/'.$this->config['base_url'].'/application/models/'.$file.'.php';
+		$model_path=str_replace('//', '/', $model_path);
 		
+		//Load the specified model
+		if(file_exists($model_path)){
+			require_once($model_path);
+		
+			//Get the name of the model so the class object can be created
+			$model_name_array=explode('/', $file);
+			$model_name=$model_name_array[count($model_name_array)-1];
+			
+			//Create the class object
+			if(class_exists($model_name)){
+				return new $model_name();
+			}
+		}
+		
+		return false;
 	}
 	
 	/* --------------------------------------------------------------------------------
@@ -143,14 +160,6 @@ class ZomPHP{
 	 * -------------------------------------------------------------------------------- */
 	public function library($file){
 		
-	}
-	
-	/* --------------------------------------------------------------------------------
-	 * Display an error if a function fails
-	 * -------------------------------------------------------------------------------- */
-	private function error($function){
-		echo "An error occurred in <b>".$function."</b>!<br/>";
-		return false;
 	}
 	
 }
