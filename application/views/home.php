@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>ZomPHP - A lightweight PHP MVC framework for zombies</title>
-	</head>
-	<body>
-		<h1>Welcome to ZomPHP</h1>
-		
-		
-	</body>
-</html>
+<h2>Home Page</h2>
+
+<p><a href='<?php echo $this->config('base_url'); ?>sample/todo'>View Sample To-Do List Application</a></p>
