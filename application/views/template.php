@@ -5,36 +5,27 @@
 		<meta lang="en" />
 		<title>ZomPHP - A lightweight PHP MVC framework for zombies</title>
 		<style>
-			body{font-family: verdana; font-size: 12px;}
+			body{font-family: verdana; font-size: 12px; color: #333;}
 			footer{padding-top: 25px;}
 			a{color: inherit; text-decoration: none;}
 			p{padding: 0; margin: 0; margin-bottom: 5px;}
-			input[type=text],textarea,input[type=submit]{border: solid 1px #999; font-family: verdana; font-size: 20px;}
-			textarea{height: 100px;}
-			input[type=submit]{cursor: pointer; color: #777;}
+			hr{border-color: #999; color: #999;}
+			input{width: 100%; height: 22px;}
+			input[type="submit"]{margin: 0; padding: 0; background-color: #333; border: solid 1px #000; color: #fff;}
 			
-			table{width: 100%;}
-			th{text-align: left; background-color: #aaa;}
-			table td a{display: block; width: 100%; height: 100%;}
-			
-			.container{margin-left: auto; margin-right: auto; width: 720px;}
+			.container{margin: 0 auto; width: 300px;}
 			.center{text-align: center;}
-			.align-left{text-align: left;}
-			.align-right{text-align: right;}
-            .message{color: red; font-size: 20px;}
-			
-			.box{border-bottom: solid 1px #999; padding-top: 10px;}
-			.box-header{font-weight: bold; padding-bottom: 5px;}
 		</style>
 	</head>
 	<body>
-		<header class="container">
+		<header class="container center">
 			<h1><a href="<?php echo $this->config('base_url'); ?>">Welcome to ZomPHP!</a></h1>
 		</header>
 		<section class="container">
 			<?php $this->view($content); ?>
 		</section>
-		<footer class="container">
+		<footer class="container center">
+			<hr/>
 			&copy; Chase Terry <?php echo date('Y'); ?>
 		</footer>
 	</body>

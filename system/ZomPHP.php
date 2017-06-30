@@ -152,7 +152,9 @@ class ZomPHP{
 	 * Get the value of a config item
 	 * -------------------------------------------------------------------------------- */
 	public function config($item){
-	
+		if(array_key_exists($item, $this->config)){
+			return $this->config[$item];
+		}
 	}
 	
 	/* --------------------------------------------------------------------------------
