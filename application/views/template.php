@@ -9,7 +9,7 @@
 			footer{padding-top: 25px;}
 			a{color: inherit; text-decoration: none;}
 			p{padding: 0; margin: 0; margin-bottom: 5px;}
-			input[type=text],textarea,input[type=submit]{width: 100%; border: solid 1px #999; font-family: verdana; font-size: 20px;}
+			input[type=text],textarea,input[type=submit]{border: solid 1px #999; font-family: verdana; font-size: 20px;}
 			textarea{height: 100px;}
 			input[type=submit]{cursor: pointer; color: #777;}
 			
@@ -24,7 +24,7 @@
             .message{color: red; font-size: 20px;}
 			
 			.box{border-bottom: solid 1px #999; padding-top: 10px;}
-			.box-header{font-weight: bold; font-size: 16px; padding-bottom: 5px;}
+			.box-header{font-weight: bold; padding-bottom: 5px;}
 		</style>
 	</head>
 	<body>

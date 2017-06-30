@@ -14,16 +14,19 @@ class ZomDB{
 	/* ----------------------------------------------------------------------
 	 * Connect to a database
 	 * ---------------------------------------------------------------------- */
-	public function connect($database, $conn=''){
+	public function connect($database, $conn='default'){
 		try{
 			if($conn!='' and array_key_exists($conn, $database)){
 				self::$connection=new PDO('mysql:host='.$database[$conn]['host'].';dbname='.$database[$conn]['name'], $database[$conn]['user'], $database[$conn]['pass']);
+				
+				return $this->db=self::$connection;
 			}else{
-				self::$connection=new PDO('mysql:host='.$database['default']['host'].';dbname='.$database['default']['name'], $database['default']['user'], $database['default']['pass']);
+				echo "<h1>Invalid database configuration!</h1>";
 			}
 		}catch(PDOException $e){
 			echo "<h1>Datbase connection error!</h1>";
 			echo "<p>".$e->getMessage()."</p>";
 		}
+		return false;
 	}
 }
