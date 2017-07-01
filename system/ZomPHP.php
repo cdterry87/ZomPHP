@@ -125,6 +125,16 @@ class ZomPHP{
 	}
 	
 	/* --------------------------------------------------------------------------------
+	 * Get specified parameter from the URL
+	 * -------------------------------------------------------------------------------- */
+	public function get_param($index){
+		if(array_key_exists($index,$this->_view_params)){
+			return $this->_view_params[$index];
+		}
+		return false;
+	}
+	
+	/* --------------------------------------------------------------------------------
 	 * Load a specified model class
 	 * -------------------------------------------------------------------------------- */
 	public function model($file){

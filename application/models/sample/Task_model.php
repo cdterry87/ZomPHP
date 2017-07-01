@@ -44,7 +44,7 @@ class Task_model extends ZomDB{
 		//By default, pass.
 		$pass=true;
 		
-		if($task==''){
+		if(trim($task)==''){
 			$pass=false;
 		}
 		
@@ -58,6 +58,13 @@ class Task_model extends ZomDB{
 		$query=$this->db->prepare('delete from tasks where task_id=:task_id');
 		$query->bindParam(':task_id',$id);
 		$query->execute();
+	}
+	
+	/* --------------------------------------------------------------------------------
+	 * Validate required fields
+	 * -------------------------------------------------------------------------------- */
+	public function get_messages(){
+		
 	}
 	
 }

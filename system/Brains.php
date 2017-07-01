@@ -1,12 +1,32 @@
 <?php
 
 /* ----------------------------------------------------------------------
- * Redirect to the specified page
+ * Format path with base_url
  * ---------------------------------------------------------------------- */
-function redirect($page){
+function base_url($path){
 	extract($GLOBALS);
 	
-	header('location: '.$config['base_url'].$page, true);
+	return $config['base_url'].$path;
+}
+
+/* ----------------------------------------------------------------------
+ * Format a link
+ * ---------------------------------------------------------------------- */
+function anchor($path, $name='', $class=''){
+	extract($GLOBALS);
+	
+	if(trim($class)!='') $class=' class="'.$class.'"';
+	
+	return '<a href="'.$config['base_url'].$path.'" '.$class.'>'.$name.'</a>';
+}
+
+/* ----------------------------------------------------------------------
+ * Redirect to the specified page
+ * ---------------------------------------------------------------------- */
+function redirect($path){
+	extract($GLOBALS);
+	
+	header('location: '.$config['base_url'].$path, true);
 	exit;
 }
 

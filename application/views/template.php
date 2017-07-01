@@ -13,8 +13,11 @@
 			input{width: 100%; height: 22px; margin: 0; padding: 0; }
 			input[type="submit"]{background-color: #3794C6; border: solid 1px #108BC9; color: #fff;}
 			
+			table{width: 100%;}
+			
 			.container{margin: 0 auto; width: 300px;}
 			.center{text-align: center;}
+			.align-right{text-align: right;}
 		</style>
 	</head>
 	<body>
