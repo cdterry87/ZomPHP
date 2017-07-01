@@ -14,6 +14,7 @@
 			input[type="submit"]{background-color: #3794C6; border: solid 1px #108BC9; color: #fff;}
 			
 			table{width: 100%;}
+			table th{text-align: left;}
 			
 			.container{margin: 0 auto; width: 300px;}
 			.center{text-align: center;}
