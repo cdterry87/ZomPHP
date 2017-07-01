@@ -10,8 +10,8 @@
 			a{color: inherit; text-decoration: none;}
 			p{padding: 0; margin: 0; margin-bottom: 5px;}
 			hr{border-color: #999; color: #999;}
-			input{width: 100%; height: 22px;}
-			input[type="submit"]{margin: 0; padding: 0; background-color: #333; border: solid 1px #000; color: #fff;}
+			input{width: 100%; height: 22px; margin: 0; padding: 0; }
+			input[type="submit"]{background-color: #3794C6; border: solid 1px #108BC9; color: #fff;}
 			
 			.container{margin: 0 auto; width: 300px;}
 			.center{text-align: center;}
