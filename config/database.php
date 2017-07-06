@@ -7,5 +7,5 @@ $database['default']=array(
 	'host'		=> 'localhost',
 	'name'		=> 'zomphp',
 	'user'		=> 'root',
-	'pass'		=> 'silenT32'
+	'pass'		=> ''
 );
