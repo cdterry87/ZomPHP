@@ -12,12 +12,10 @@ function base_url($path){
 /* ----------------------------------------------------------------------
  * Format a link
  * ---------------------------------------------------------------------- */
-function anchor($path, $name='', $class=''){
+function anchor($path, $name='', $attributes=''){
 	extract($GLOBALS);
 	
-	if(trim($class)!='') $class=' class="'.$class.'"';
-	
-	return '<a href="'.$config['base_url'].$path.'" '.$class.'>'.$name.'</a>';
+	return '<a href="'.$config['base_url'].$path.'" '.$attributes.'>'.$name.'</a>';
 }
 
 /* ----------------------------------------------------------------------
