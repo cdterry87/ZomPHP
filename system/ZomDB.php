@@ -34,7 +34,7 @@ class ZomDB{
 	 * Prepare data to be inserted into a database table
 	 * -------------------------------------------------------------------------------- */
 	final protected function prepare($table, $data=''){
-		$prepared = '';
+		$prepared = array();
 		
 		//If data is not defined, assume data is $_POST
 		if($data==''){
